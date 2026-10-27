@@ -1,0 +1,551 @@
+@charset "utf-8";
+
+/* 全体共通 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yu Gothic";
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--white-orange);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --lightpink: #F4C7C3;
+    --orange: #E9826F;
+    --dark: #3C3331;
+    --white-orange: #FFF8F4;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mv {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: "Sedan";
+    color: var(--orange);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    background-image: url(../image/ashirai_01.png);
+    position: absolute;
+    left: 10px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1::after {
+    content: "";
+    background-image: url(../image/ashirai_02.png);
+    position: absolute;
+    right: 10px;
+    bottom: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+
+
+h2 {
+    font-size: 22px;
+    color: var(--orange);
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.figma_link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: underline;
+    color: #0000EE;
+}
+
+.figma_link:hover {
+    opacity: 0.6;
+}
+
+.fa-arrow-up-right-from-square {
+    font-size: 15px;
+    color: #0000EE;
+}
+
+.bold {
+    font-weight: bold
+}
+
+
+.notes {
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
+.article {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.article_text {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn {
+    background: linear-gradient(90deg, var(--orange), #E9AC6F);
+    color: var(--white-orange);
+    text-align: center;
+    position: relative;
+    padding: 18px 46px;
+    border-radius: 999px;
+    margin: 30px auto 0 auto;
+    width: 280px;
+    box-shadow: 0 1px 4px -1px #894436;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.btn::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 7px 0 7px 8px;
+    border-color: transparent transparent transparent var(--white-orange);
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14%;
+
+}
+
+
+/* nav */
+.under_line {
+    border-bottom: 1px solid var(--dark);
+}
+
+nav {
+    background-color: #E2BCA6;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 60px;
+    font-family: "sedan";
+    font-size: 22px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    background-color: #E2BCA6;
+    border-right: 1px solid var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li:hover {
+    opacity: 0.5;
+}
+
+nav ul li:last-child {
+    border: none;
+}
+
+.page_top {
+    position: fixed;
+    width: 75px;
+    height: auto;
+    bottom: 50px;
+    right: 5%;
+    z-index: 999;
+}
+
+.copyright {
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--dark);
+    text-align: right;
+    color: var(--white-orange);
+    font-size: 14px;
+}
+
+/* about */
+.flex_wrap_about {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 60px;
+    gap: 10%;
+}
+
+.about_text {
+    width: 45%;
+}
+
+.about_visual {
+    width: 45%;
+    height: auto;
+}
+
+.flex_wrap_about p:first-of-type {
+    padding-bottom: 40px;
+}
+
+/* webdesign */
+
+.summary {
+    margin-bottom: 10px;
+}
+
+.website {
+    margin-top: 40px;
+}
+
+.webdesign_visual ul {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+.number {
+    font-family: "Sura";
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.flex_wrap_webdesign {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.webdesign_visual {
+    width: 45%;
+}
+
+.webdesign_text {
+    width: 45%;
+}
+
+.webdesign_img {
+    margin-top: 20px;
+}
+
+.img_list {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 10px;
+}
+
+
+.img_list img {
+    width: 30%;
+}
+
+
+/* banner */
+.flex_wrap_banner {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.banner h2:first-of-type {
+    margin-top: 30px;
+}
+
+.banner_300_250 {
+    width: 300px;
+    height: auto;
+}
+
+.banner_728_90 {
+    width: 100%;
+    height: auto;
+}
+
+.banner_logo {
+    width: 336px;
+    height: auto;
+}
+
+.matcha_logo {
+    width: 200px;
+    height: auto;
+}
+
+.banner_3clm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.banner_text {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    margin: 30px 0 60px 0;
+    flex: 1;
+}
+
+/* photoshop */
+
+.photoshop_summary{
+    display: flex   ;
+    flex-direction:row;
+    gap: 10%;
+}
+
+.photoshop_list{
+    width: 45%;
+}
+
+.photoshop_tool{
+    width: 45%;
+}
+
+.photoshop_ul {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+.grid_wrap_photoshop {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.flex_wrap_photoshop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.befor_after{
+    background-color: var(--orange);
+    color: var(--white-orange);
+    font-family: "Sedan";
+    font-size: 18px;
+    padding: 6px;
+    border-radius: 8px;
+    
+}
+
+.gousei_before{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    height: auto;
+}
+
+
+.gousei_before img {
+    width: 100%;
+    height: auto;
+}
+
+.gousei_after img {
+    width: 100%;
+    height: auto;
+}
+
+.full {
+    grid-column: span 6;
+}
+
+.half {
+    grid-column: span 3;
+    height: 200px;
+    object-fit: cover;
+}
+
+.third {
+    grid-column: span 2;
+}
+
+.photoshop_text{
+    display: flex;
+    flex-direction: row;
+     gap: 2%;
+    margin: 30px 0 60px 0;
+}
+
+.kirinuki_before img{
+    height:380px;
+    width: auto;
+}
+
+.kirinuki_after img{
+   height: 380px;
+    width: auto;
+}
+
+/* SP */
+@media (max-width: 768px) {
+
+    /* 共通 */
+    h1 {
+        padding: 40px 0;
+        font-size: 26px;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .is-current {
+        background-color: #3C3331;
+        color: var(--white-orange);
+    }
+
+    nav {
+        background-color: #E2BCA6;
+
+    }
+
+    nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        height: 120px;
+        font-size: 18px;
+        padding: 0;
+
+    }
+
+    nav ul li {
+        border: 1px solid var(--dark);
+    }
+
+    nav ul li:last-child {
+        border: 1px solid var(--dark);
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+
+    /* about */
+
+    .flex_wrap_about {
+        flex-direction: column;
+        padding-bottom: 40px;
+        gap: 40px;
+    }
+
+    .about_text {
+        height: 45%;
+        width: auto;
+    }
+
+    .about_visual {
+        height: 45%;
+        width: auto;
+    }
+
+    /* webdesign */
+
+    .flex_wrap_webdesign {
+        flex-direction: column;
+        margin-bottom: 40px;
+
+    }
+
+    .webdesign_visual {
+        width: 100%;
+    }
+
+    .webdesign_text {
+        width: 100%;
+    }
+
+    .webdesign_visual .btn {
+        margin-bottom: 40px;
+    }
+
+    .article {
+        font-size: 16px;
+    }
+
+    /* banner */
+    .flex_wrap_banner {
+        flex-direction: column;
+    }
+
+    .banner_text {
+        flex-direction: column;
+        margin: 20px 0 40px 0;
+    }
+
+    /* photoshop */
+    .grid_wrap_photoshop {
+   grid-template-columns: 1fr;
+   gap: 20px; 
+    }
+
+   .photoshop_arrow{
+    transform: rotate(90deg);
+    margin: 0 auto;
+    width: 30px;
+   }
+
+   .photoshop_text{
+    flex-direction: column;
+    margin: 20px 0 40px 0;
+}
+
+.flex_wrap_photoshop{
+    flex-direction: column;
+    gap: 30px;
+}
+
+    }
+
