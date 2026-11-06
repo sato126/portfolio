@@ -136,7 +136,7 @@ p {
 }
 
 .btn:hover {
-    opacity: 0.6;
+    background: linear-gradient(90deg, #E9AC6F,var(--orange));
 }
 
 .btn::after {
@@ -165,7 +165,7 @@ nav {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     height: 60px;
     font-family: "sedan";
     font-size: 22px;
@@ -424,6 +424,44 @@ nav ul li:last-child {
     width: auto;
 }
 
+/* aiapp */
+
+.css_study {
+    margin-top: 40px;
+}
+
+.flex_wrap_aiapp {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.aiapp_visual {
+    width: 45%;
+}
+
+.aiapp_text{
+    width: 45%;
+}
+
+.aiapp_img {
+    margin-top: 20px;
+}
+
+.img_list {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 10px;
+}
+
+
+.img_list img {
+    width: 30%;
+}
+
+
 /* SP */
 @media (max-width: 768px) {
 
@@ -454,7 +492,7 @@ nav ul li:last-child {
 
     nav ul {
         grid-template-columns: repeat(2, 1fr);
-        height: 120px;
+        height: 160px;
         font-size: 18px;
         padding: 0;
 
@@ -466,6 +504,10 @@ nav ul li:last-child {
 
     nav ul li:last-child {
         border: 1px solid var(--dark);
+    }
+
+    .about_nav{
+        grid-column: 1 / -1;
     }
 
     .copyright {
@@ -546,6 +588,30 @@ nav ul li:last-child {
     flex-direction: column;
     gap: 30px;
 }
+
+/* aiapp */
+
+    .flex_wrap_aiapp {
+        flex-direction: column;
+        margin-bottom: 40px;
+
+    }
+
+    .aiapp_visual {
+        width: 100%;
+    }
+
+    .aiapp_text {
+        width: 100%;
+    }
+
+    .aiapp_visual .btn {
+        margin-bottom: 40px;
+    }
+
+    .article {
+        font-size: 16px;
+    }
 
     }
 
