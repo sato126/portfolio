@@ -568,6 +568,13 @@ nav ul li:last-child {
     }
 
     /* photoshop */
+    .photoshop_summary{
+    flex-direction:column;
+}
+
+.photoshop_list{
+    width: 100%;
+}
     .grid_wrap_photoshop {
    grid-template-columns: 1fr;
    gap: 20px; 
@@ -600,7 +607,6 @@ nav ul li:last-child {
     .aiapp_visual {
         width: 100%;
     }
-
     .aiapp_text {
         width: 100%;
     }
